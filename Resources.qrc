@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/Res/img">
+        <file>delete.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>default_icon.png</file>
+        <file>login icon.png</file>
+        <file>Registr icon.png</file>
+        <file>Root access.jpg</file>
+        <file>Target.jpg</file>
+        <file>quit-512.png</file>
+    </qresource>
+</RCC>

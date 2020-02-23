@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>917</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 12pt &quot;PT Astra Serif&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetFixedSize</enum>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="Name_Label">
+          <property name="minimumSize">
+           <size>
+            <width>220</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="JobPos_label">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Photo_label">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>175</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>175</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/default_icon.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="StartWork_pushButton">
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Начать рабочий день</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="EndOfWork_pushButton">
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Закончить рабочий день</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTableView" name="Aims_tableView">
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="formLayout"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="UpdateAims_pushButton">
+        <property name="text">
+         <string>Обновить задачи</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>917</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Авторизация сотрудника</string>
+    </property>
+    <addaction name="Auth_action"/>
+    <addaction name="Reg_action"/>
+    <addaction name="separator"/>
+    <addaction name="Director_action"/>
+    <addaction name="Quit_action"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">QStatusBar{
+rgb(255, 0, 0)
+}</string>
+   </property>
+  </widget>
+  <action name="Auth_action">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/login icon.png</normaloff>:/login icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Авторизация</string>
+   </property>
+  </action>
+  <action name="Reg_action">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Registr icon.png</normaloff>:/Registr icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Регистрация</string>
+   </property>
+  </action>
+  <action name="Director_action">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Root access.jpg</normaloff>:/Root access.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Расширенный доступ</string>
+   </property>
+  </action>
+  <action name="Quit_action">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/quit-512.png</normaloff>:/quit-512.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выйти</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
