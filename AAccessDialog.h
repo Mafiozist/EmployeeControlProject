@@ -1,5 +1,5 @@
-#ifndef A_ACCESSDIALOG_H
-#define A_ACCESSDIALOG_H
+#ifndef AACCESSDIALOG_H
+#define AACCESSDIALOG_H
 
 #include<QSqlDatabase>
 #include<QSqlQuery>
@@ -8,21 +8,21 @@
 #include<QMessageBox>
 #include<QSqlTableModel>
 
-#include"add_aim_dialog.h"
-#include"add_jobpos_dialog.h"
+#include"AddAimDialog.h"
+#include"AddJobPosDialog.h"
 #include"deletedialog.h"
 
 namespace Ui {
-class a_accessdialog;
+class AAccessDialog;
 }
 
-class a_accessdialog : public QDialog
+class AAccessDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit a_accessdialog(QSqlDatabase db,QString dbname="empcomp", QWidget *parent = nullptr);
-    ~a_accessdialog();
+    explicit AAccessDialog(QSqlDatabase db,QString dbname="empcomp", QWidget *parent = nullptr);
+    ~AAccessDialog();
 
     void TableCorrect();
     void SortByPart();
@@ -50,7 +50,7 @@ private:
     AddJobPosDialog* jpdialog;
     DeleteDialog* deldial;
 
-    Ui::a_accessdialog *ui;
+    Ui::AAccessDialog *ui;
 };
 
 #endif // A_ACCESSDIALOG_H

@@ -1,6 +1,6 @@
-#include "reg_dialog.h"
+#include "RegDialog.h"
 #include "ui_regdialog.h"
-#include"login_dialog.h"
+#include"LoginDialog.h"
 #include <QFileDialog>
 #include<QDebug>
 #include<QBuffer>

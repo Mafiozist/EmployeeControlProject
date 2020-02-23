@@ -1,7 +1,8 @@
-#include "add_aim_dialog.h"
+#include "AddAimDialog.h"
 #include "ui_addaimdialog.h"
 #include<QMessageBox>
 #include<QSqlError>
+
 AddAimDialog::AddAimDialog(QSqlDatabase db,QWidget *parent) :
     QDialog(parent),db(db),
     ui(new Ui::AddAimDialog)

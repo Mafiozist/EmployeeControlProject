@@ -1,7 +1,7 @@
 #ifndef ADDAIMDIALOG_H
 #define ADDAIMDIALOG_H
 
-#include <QDialog>
+#include<QDialog>
 #include<QSqlDatabase>
 #include<QSqlQuery>
 

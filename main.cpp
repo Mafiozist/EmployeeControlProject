@@ -1,8 +1,8 @@
 #include "mainwindow.h"
-#include"login_dialog.h"
+#include"LoginDialog.h"
 #include <QApplication>
 #include<QIcon>
-#include<a_accessdialog.h>
+#include<AAccessDialog.h>
 #include<QSqlQuery>
 #include<QSqlError>
 

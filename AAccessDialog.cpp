@@ -1,10 +1,10 @@
-#include "a_accessdialog.h"
-#include "ui_a_accessdialog.h"
+#include "AAccessDialog.h"
+#include "ui_AAccessDialog.h"
 #include<QMessageBox>
 
-a_accessdialog::a_accessdialog(QSqlDatabase db,QString dbname,QWidget *parent) :
+AAccessDialog::AAccessDialog(QSqlDatabase db,QString dbname,QWidget *parent) :
     QDialog(parent),db(db),CurDbName(dbname),
-    ui(new Ui::a_accessdialog)
+    ui(new Ui::AAccessDialog)
 {
     ui->setupUi(this);
     sqlmodel=new QSqlTableModel(this,db);
@@ -17,7 +17,7 @@ a_accessdialog::a_accessdialog(QSqlDatabase db,QString dbname,QWidget *parent) :
     ui->tableView->setSortingEnabled(true);
 }
 
-a_accessdialog::~a_accessdialog()
+AAccessDialog::~AAccessDialog()
 {
     delete ui;
     delete query;
@@ -28,7 +28,7 @@ a_accessdialog::~a_accessdialog()
 }
 
 //Используется для форматирования таблиц и добавления в вариантов сортировки в комбо бокс
-void a_accessdialog::TableCorrect()
+void AAccessDialog::TableCorrect()
 {
     ui->Sort_comboBox->clear();
     QStringList sortEmployee={"Зарплата","Админ статус","Должность","ФИО"};
@@ -73,7 +73,7 @@ void a_accessdialog::TableCorrect()
 }
 
 //Устанавливаем таблицу и корректируем заголовки
-void a_accessdialog::on_UpdateTable_pushButton_clicked()
+void AAccessDialog::on_UpdateTable_pushButton_clicked()
 {
     sqlmodel->setTable(ui->TableNames_comboBox->currentText());
     sqlmodel->select();
@@ -84,7 +84,7 @@ void a_accessdialog::on_UpdateTable_pushButton_clicked()
 }
 
 //Осуществление добавления данных в бд по таблице
-void a_accessdialog::on_add_pushButton_clicked()
+void AAccessDialog::on_add_pushButton_clicked()
 {
     //Проверка на соот таблицу и запуск соот диалогового окна
     if(ui->TableNames_comboBox->currentText()=="employee")
@@ -106,7 +106,7 @@ void a_accessdialog::on_add_pushButton_clicked()
 }
 
 
-void a_accessdialog::on_Sort_pushButton_clicked()
+void AAccessDialog::on_Sort_pushButton_clicked()
 {
     if(ui->TableNames_comboBox->currentText()!="employee") QMessageBox::information(this,"Внимание","Для этой таблицы используйте сортировку встроенную в таблицу.(По клику на столбец)");
     else
@@ -155,7 +155,7 @@ void a_accessdialog::on_Sort_pushButton_clicked()
     }
 }
 
-void a_accessdialog::on_Remove_pushButton_clicked()
+void AAccessDialog::on_Remove_pushButton_clicked()
 {
     deldial=new DeleteDialog(db,ui->TableNames_comboBox->currentText());
     deldial->exec();

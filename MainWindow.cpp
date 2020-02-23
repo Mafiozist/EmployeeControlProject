@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "login_dialog.h"    //Диалоговое окно регистрации и логина
+#include "LoginDialog.h"    //Диалоговое окно регистрации и логина
 #include<QSqlTableModel>         //Табличное представление запроса в бд
 #include<QMessageBox>            //Нотификация через виджет
 #include<QDateTime>              //дата и время
@@ -341,7 +341,7 @@ void MainWindow::on_Director_action_triggered()
 
         if(astatus>0)
         {
-               dirdial=new a_accessdialog(db);
+               dirdial=new AAccessDialog(db);
                 dirdial->exec();
         }
         else QMessageBox::information(this,"Внимание","У вас нет доступа к этой функции, обратитесь к администрации");

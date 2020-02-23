@@ -16,35 +16,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    a_accessdialog.cpp \
-    add_aim_dialog.cpp \
-    add_jobpos_dialog.cpp \
-    deletedialog.cpp \
-    login_dialog.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    reg_dialog.cpp
+    AAccessDialog.cpp \
+    AddAimDialog.cpp \
+    AddJobPosDialog.cpp \
+    DeleteDialog.cpp \
+    LoginDialog.cpp \
+    MainWindow.cpp \
+    RegDialog.cpp \
+    main.cpp
 QMAKE_CXXFLAGS+= -m32
 QMAKE_LFLAGS += -m32
 
 HEADERS += \
-    a_accessdialog.h \
-    add_aim_dialog.h \
-    add_jobpos_dialog.h \
-    deletedialog.h \
-    login_dialog.h \
-    mainwindow.h \
-    modify_editability_model.h \
-    reg_dialog.h
+    AAccessDialog.h \
+    AddAimDialog.h \
+    AddJobPosDialog.h \
+    DeleteDialog.h \
+    LoginDialog.h \
+    MainWindow.h \
+    ModifyEditabilityModel.h \
+    RegDialog.h
 
 FORMS += \
-    a_accessdialog.ui \
-    addaimdialog.ui \
-    addjobposdialog.ui \
-    deletedialog.ui \
-    logindialog.ui \
-    mainwindow.ui \
-    regdialog.ui
+    AAccessDialog.ui \
+    AddAimDialog.ui \
+    AddJobPosDialog.ui \
+    DeleteDialog.ui \
+    LoginDialog.ui \
+    MainWindow.ui \
+    RegDialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

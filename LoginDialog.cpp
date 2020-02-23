@@ -1,7 +1,7 @@
-#include "login_dialog.h"
+#include "LoginDialog.h"
 #include "ui_logindialog.h"
 #include<QDebug>
-#include"mainwindow.h"
+#include"MainWindow.h"
 #include<QIcon>
 #include<QMessageBox>
 

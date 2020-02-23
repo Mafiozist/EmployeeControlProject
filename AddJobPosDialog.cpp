@@ -1,4 +1,4 @@
-#include "add_jobpos_dialog.h"
+#include "AddJobPosDialog.h"
 #include "ui_addjobposdialog.h"
 #include<QMessageBox>
 #include<QDebug>

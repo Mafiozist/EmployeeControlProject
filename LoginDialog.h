@@ -7,7 +7,7 @@
 #include<QSqlError>
 #include<QDebug>
 #include<QMessageBox>
-#include<mainwindow.h>
+#include<MainWindow.h>
 
 class MainWindow;
 

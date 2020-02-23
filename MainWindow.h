@@ -10,10 +10,10 @@
 #include<QMessageBox>
 #include<QSqlQueryModel>
 #include<QSqlTableModel>
-#include"login_dialog.h"
-#include"reg_dialog.h"
-#include"modify_editability_model.h"
-#include "a_accessdialog.h"
+#include"LoginDialog.h"
+#include"RegDialog.h"
+#include"ModifyEditabilityModel.h"
+#include "AAccessDialog.h"
 
 class LoginDialog;
 
@@ -70,7 +70,7 @@ private:
     LoginDialog* authdial;//Окно авторизации
     RegDialog* regdial;//Окно регистрации
     ModifyEditabilityModel* modifmodel;//Блокировка доступа к данным для
-    a_accessdialog* dirdial;
+    AAccessDialog* dirdial;
 
     Ui::MainWindow *ui;
 };

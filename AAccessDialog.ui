@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>a_accessdialog</class>
- <widget class="QDialog" name="a_accessdialog">
+ <class>AAccessDialog</class>
+ <widget class="QDialog" name="AAccessDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
